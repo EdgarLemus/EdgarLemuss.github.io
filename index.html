@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de QR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de QR</h1>
+    <form id="qrForm">
+      <label for="urlInput">URL:</label>
+      <input type="text" id="urlInput" name="url">
+      <br>
+      <label for="backgroundColor">Color de Fondo:</label>
+      <input type="color" id="backgroundColor" name="backgroundColor">
+      <br>
+      <label for="dotColor">Color de la Trama:</label>
+      <input type="color" id="dotColor" name="dotColor">
+      <br>
+      <label for="borderColor">Color del Borde:</label>
+      <input type="color" id="borderColor" name="borderColor">
+      <br>
+      <label for="qrSize">Tamaño del QR:</label>
+      <input type="number" id="qrSize" name="qrSize" value="250">
+      <br>
+      <button type="button" onclick="generateQR()">Generar QR</button>
+      <button type="button" onclick="downloadQR()" id="downloadBtn" style="display:none;">Descargar QR</button>
+    </form>
+    <div id="qrCodeContainer" class="hidden">
+      <canvas id="qrCanvas"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
